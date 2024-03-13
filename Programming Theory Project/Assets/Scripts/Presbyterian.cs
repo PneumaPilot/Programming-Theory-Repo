@@ -2,17 +2,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Presbyterian : MonoBehaviour
+// INHERITANCE
+public class Presbyterian : Church
 {
-    // Start is called before the first frame update
-    void Start()
+    public Presbyterian() { }
+
+    public Presbyterian(int members)
     {
-        
+        this.m_members = members;
+        this.m_treasury = 0;
     }
 
-    // Update is called once per frame
-    void Update()
+    //POLYMORPHISM
+    public override void Pray()
     {
-        
+        // Print Presbyterian prayer
+    }
+
+    public override void Preach()
+    {
+        // Describe Presbyterian sermon
+    }
+
+    public override void Baptize(int numberOfConverts)
+    {
+        // Describe baptism and add members
+    }
+
+    public override void Communion()
+    {
+        // Describe Presbyterian communion
+    }
+
+    public override void Sing()
+    {
+        // Describe example song
     }
 }

@@ -13,6 +13,7 @@ public class Baptist : Church
         this.m_treasury = 0;
     }
 
+    //POLYMORPHISM
     public override void Pray()
     {
         // Print Baptist prayer
@@ -30,7 +31,7 @@ public class Baptist : Church
 
     public override void Communion()
     {
-        // Describer Baptist communion
+        // Describe Baptist communion
     }
 
     public override void Sing()

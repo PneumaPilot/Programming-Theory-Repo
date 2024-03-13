@@ -2,17 +2,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Charismatic : MonoBehaviour
+// INHERITANCE
+public class Charismatic : Church
 {
-    // Start is called before the first frame update
-    void Start()
+    public Charismatic() { }
+
+    public Charismatic(int members)
     {
-        
+        this.m_members = members;
+        this.m_treasury = 0;
     }
 
-    // Update is called once per frame
-    void Update()
+    //POLYMORPHISM
+    public override void Pray()
     {
-        
+        // Print Charismatic prayer
+    }
+
+    public override void Preach()
+    {
+        // Describe Charismatic sermon
+    }
+
+    public override void Baptize(int numberOfConverts)
+    {
+        // Describe baptism and add members
+    }
+
+    public override void Communion()
+    {
+        // Describe Charismatic communion
+    }
+
+    public override void Sing()
+    {
+        // Describe example song
     }
 }

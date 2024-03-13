@@ -2,17 +2,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Catholic : MonoBehaviour
+// INHERITANCE
+public class Catholic : Church
 {
-    // Start is called before the first frame update
-    void Start()
+    public Catholic() { }
+
+    public Catholic(int members)
     {
-        
+        this.m_members = members;
+        this.m_treasury = 0;
     }
 
-    // Update is called once per frame
-    void Update()
+    // POLYMORPHISM
+    public override void Pray()
     {
-        
+        // Print Catholic prayer
+    }
+
+    public override void Preach()
+    {
+        // Describe Catholic sermon
+    }
+
+    public override void Baptize(int numberOfConverts)
+    {
+        // Describe baptism and add members
+    }
+
+    public override void Communion()
+    {
+        // Describe Catholic communion
+    }
+
+    public override void Sing()
+    {
+        // Describe example song
     }
 }
