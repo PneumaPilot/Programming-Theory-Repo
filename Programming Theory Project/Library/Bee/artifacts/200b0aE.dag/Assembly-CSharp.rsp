@@ -357,6 +357,7 @@
 "Assets/Scripts/Catholic.cs"
 "Assets/Scripts/Charismatic.cs"
 "Assets/Scripts/Church.cs"
+"Assets/Scripts/LiturgyController.cs"
 "Assets/Scripts/MenuController.cs"
 "Assets/Scripts/Presbyterian.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
