@@ -2,22 +2,45 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class LiturgyController : MonoBehaviour
 {
     private Church chosenChurch;
+    public TextMeshProUGUI SimulationText;
+    public TextMeshProUGUI ChosenDenominationText;
+    private MenuController menuController;
 
-    // Start is called before the first frame update
-    void Awake()
+    private void Start()
     {
-        MenuController menuController = GameObject.Find("MenuController").GetComponent<MenuController>();
+        menuController = GameObject.Find("MenuController").GetComponent<MenuController>();
         chosenChurch = menuController.ChosenChurch;
+        ChosenDenominationText.text = chosenChurch.DenominationName + " Denomination Chosen";
     }
 
-    // Update is called once per frame
-    void Update()
+    public void DisplayPrayer()
     {
-        
+        SimulationText.text = chosenChurch.Pray();
+    }
+
+    public void DisplaySing()
+    {
+        SimulationText.text = chosenChurch.Sing();
+    }
+
+    public void DisplayBaptize()
+    {
+        SimulationText.text = chosenChurch.Baptize(3);
+    }
+
+    public void DisplayPreach()
+    {
+        SimulationText.text = chosenChurch.Preach();
+    }
+
+    public void DisplayCommune()
+    {
+        SimulationText.text = chosenChurch.Communion();
     }
 
     public void ResetDenomination()

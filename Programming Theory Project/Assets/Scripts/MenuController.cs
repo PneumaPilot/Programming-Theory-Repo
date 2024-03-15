@@ -7,32 +7,25 @@ public class MenuController : MonoBehaviour
 {
     public Church ChosenChurch;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void SelectDenomination(int denomination)
     {
+        Church selectedChurch;
         switch (denomination){
             case 0:
-                ChosenChurch = new Baptist();
+                selectedChurch = new Baptist();
+                ChosenChurch = selectedChurch;
                 break;
             case 1:
-                ChosenChurch = new Presbyterian();
+                selectedChurch = new Presbyterian();
+                ChosenChurch = selectedChurch;
                 break;
             case 2:
-                ChosenChurch = new Catholic();
+                selectedChurch = new Catholic();
+                ChosenChurch = selectedChurch;
                 break;
             case 3:
-                ChosenChurch = new Charismatic();
+                selectedChurch = new Charismatic();
+                ChosenChurch = selectedChurch;
                 break;
         }
         DontDestroyOnLoad(this.gameObject);

@@ -6,11 +6,13 @@ public abstract class Church
 {
     protected int m_members;
     protected float m_treasury;
+    protected string m_name;
 
     public Church()
     {
         m_members = 0;
         m_treasury = 0;
+        m_name = "Unassigned";
     }
 
     public Church(int members)
@@ -24,6 +26,7 @@ public abstract class Church
             m_members = 0;
         }
         m_treasury = 0;
+        m_name = "Unassigned";
     }
 
     // ENCAPSULATION
@@ -54,8 +57,16 @@ public abstract class Church
         }
     }
 
+    public string DenominationName
+    {
+        get
+        {
+            return m_name;
+        }
+    }
+
     // ABSTRACTION
-    public abstract void Pray(); // Print example prayer on screen
+    public abstract string Pray(); // Print example prayer on screen
 
     public virtual void TakeOffering(float offering) // Adds money to the treasury
     {
@@ -65,11 +76,11 @@ public abstract class Church
         }
     }
 
-    public abstract void Preach(); // Describe sermon on screen
+    public abstract string Preach(); // Describe sermon on screen
 
-    public abstract void Baptize(int numberOfConverts); // Describe baptism on screen
+    public abstract string Baptize(int numberOfConverts); // Describe baptism on screen
 
-    public abstract void Sing(); // Describe sample song on screen
+    public abstract string Sing(); // Describe sample song on screen
 
-    public abstract void Communion(); // Describe communion celebration on screen
+    public abstract string Communion(); // Describe communion celebration on screen
 }
