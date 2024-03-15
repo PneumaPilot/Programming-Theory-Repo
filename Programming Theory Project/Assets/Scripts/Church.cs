@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Church : MonoBehaviour
+public abstract class Church
 {
     protected int m_members;
     protected float m_treasury;

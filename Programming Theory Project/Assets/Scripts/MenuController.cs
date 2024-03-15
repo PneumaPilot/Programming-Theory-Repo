@@ -35,8 +35,8 @@ public class MenuController : MonoBehaviour
                 ChosenChurch = new Charismatic();
                 break;
         }
-        DontDestroyOnLoad(ChosenChurch);
+        DontDestroyOnLoad(this.gameObject);
 
-
+        SceneManager.LoadScene(1);
     }
 }
