@@ -37,7 +37,7 @@ public class Catholic : Church
     {
         return "The priest has the parents of the " + numberOfConverts + " infants " +
             "line up in front of a small font of water.  He then sprinkles a little " +
-            "on each of the babies - in total denial of even the plain syntax of the word " +
+            "on each of the babies - in total denial of even the plain meaning of the word " +
             "'baptize'.";
     }
 
